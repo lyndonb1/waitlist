@@ -17,7 +17,7 @@ import {
   useSpring,
 } from "framer-motion";
 
-import Snowfall from "react-snowfall";
+// import Snowfall from "react-snowfall";
 
 const people = [
   {
@@ -31,14 +31,7 @@ const people = [
 
 // useForm
 import { useForm, Controller } from "react-hook-form";
-// import { zodResolver } from "@hookform/resolvers/zod";
-// Zod
-import { z } from "zod";
 
-// const emailSchema = z.object({
-//   email: z.string().email()
-//   .min(10, "Email must at least be 5-7 characters long"),
-// });
 
 function PageHook() {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,23 +100,12 @@ function PageHook() {
 
   return (
     <div className="h-full w-full p-3 flex items-center justify-center relative z-50">
-      <Snowfall
-        snowflakeCount={200}
-        color="grey"
-        style={{
-          position: "fixed",
-          width: "100vw",
-          height: "100vh",
-          zIndex: -9,
-        }}
-        speed={"140"}
-        radius={"12"}
-      />
+      
       <section className=" mt-5  ">
         <div className="space-y-4 ">
           <div className="space-y-2 text-center">
-            <div className="flex justify-center">
-              {/* You can use video here as well */}
+             {/* <div className="flex justify-center">
+              You can use video here as well 
               <Image
                 width={128}
                 height={128}
@@ -131,7 +113,7 @@ function PageHook() {
                 src={"/img/shake.gif"}
                 className="w-32"
               />
-            </div>
+            </div> */}
             <div className="flex items-center justify-center">
               <span>🔥</span>
               <div className="p-[1px] bg-transparent  relative">
@@ -187,20 +169,6 @@ function PageHook() {
               onSubmit={handleSubmit(onSubmit)}
               className="flex flex-col lg:flex-row mx-auto lg:space-x-2 max-w-lg"
             >
-              {/* <input
-                {...register("email", {
-                  minLength: {
-                    value: 13,
-                    message: "Email must at least be 5-7 characters long",
-                  },
-                })}
-                className={` flex-1 py-2.5  outline-none focus:border-2 focus:border-neutral-100 dark:border dark:bg-opacity-20 shadow-md border 
-                border-neutral-400   dark:text-white dark:border-white/20 placeholder:text-neutral-500  pl-5 rounded-lg focus-within:border-none ${
-                  isValid ? "bg-green-500" : " "
-                } `}
-                placeholder="Your Email Address"
-                type="email"
-              /> */}
 
               <Controller
                 name="email"
@@ -299,7 +267,7 @@ function PageHook() {
               ))}
             </form>
           </div>
-          <div className="p-3 rounded-lg border dark:border-white/10 border-neutral-400 dark:border-opacity-10 relative top-14 sm:top-14 lg:top-24 max-w-xl mx-auto flex flex-col lg:flex-row justify-between items-center text-sm">
+          <div className="p-3 rounded-lg border dark:border-white/10 border-neutral-400 dark:border-opacity-10 relative top-14 sm:top-14 lg:top-4 max-w-xl mx-auto flex flex-col lg:flex-row justify-between items-center text-sm">
             <p className=" text-zinc-500 dark:text-zinc-100">
               Get ready to redefine your email experience.
             </p>
